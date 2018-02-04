@@ -30,7 +30,7 @@ $(function(){
         {"name" : "equ_warn","path" : "image/icon/arrow_02_warn.png"}
     ]);
 
-    console.log('svg', _svgNode);
+    //console.log('svg', _svgNode);
 
     //添加节点
     $('button#btnAddNode').on('click', function(){
@@ -46,13 +46,14 @@ $(function(){
         console.log('create', _node);
     });
 
+    var _buttonWrap = $('div.top-button-wrap'), _active = 'active';
     //状态
-    $('button#status01').on('click', function(){ _tmpIcon = 'ele_base'; _viewEquName.val('ele_base'); });
-    $('button#status02').on('click', function(){ _tmpIcon = 'ele_normal'; _viewEquName.val('ele_normal'); });
-    $('button#status03').on('click', function(){ _tmpIcon = 'ele_warn'; _viewEquName.val('ele_warn'); });
-    $('button#status04').on('click', function(){ _tmpIcon = 'equ_base'; _viewEquName.val('equ_base'); });
-    $('button#status05').on('click', function(){ _tmpIcon = 'equ_normal'; _viewEquName.val('equ_normal'); });
-    $('button#status06').on('click', function(){ _tmpIcon = 'equ_warn'; _viewEquName.val('equ_warn'); });
+    $('button#status01').on('click', function(){ _tmpIcon = 'ele_base'; _viewEquName.val('ele_base'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
+    $('button#status02').on('click', function(){ _tmpIcon = 'ele_normal'; _viewEquName.val('ele_normal'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
+    $('button#status03').on('click', function(){ _tmpIcon = 'ele_warn'; _viewEquName.val('ele_warn'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
+    $('button#status04').on('click', function(){ _tmpIcon = 'equ_base'; _viewEquName.val('equ_base'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
+    $('button#status05').on('click', function(){ _tmpIcon = 'equ_normal'; _viewEquName.val('equ_normal'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
+    $('button#status06').on('click', function(){ _tmpIcon = 'equ_warn'; _viewEquName.val('equ_warn'); _buttonWrap.find('button[id^=status]').removeClass(_active); $(this).addClass(_active); });
 });
 
 
