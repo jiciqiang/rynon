@@ -7,19 +7,19 @@ $(function(){
         'id' : '#svgMap',
         //编辑节点 菜单 回调函数
         nodeEditCallback : function(_node){
-            console.log('编辑节点', _node)
+            //console.log('编辑节点', _node)
         },
         //删除节点 菜单 回调函数
         nodeDelCallback : function(_node){
-            console.log('删除节点', _node)
+            //console.log('删除节点', _node)
         },
         //显示详情 菜单 回调函数
         nodeViewCallback : function(_node){
-            console.log('显示详情', _node)
+            //console.log('显示详情', _node)
         },
         //确认坐标点位置 回调函数
         nodePosCallback : function(_node, _pos){
-            console.log('position okay', _node, _pos);
+            //console.log('position okay', _node, _pos);
         }
     }, [
         {"name" : "ele_base","path" : "image/icon/arrow_01.png"},
