@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>地图 坐标点 定位</title>
-<link rel="stylesheet" type="text/css" href="css/app.min.css?_=v1517843587881"><link rel="stylesheet" type="text/css" href="css/common.min.css?_=v1517843587882"></head>
+    <link rel="stylesheet" type="text/css" href="css/my.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/app.min.css?_=v1519662812081"><link rel="stylesheet" type="text/css" href="css/common.min.css?_=v1519662812082"></head>
 <body>
 <div class="main-wrapper">
     <div class="top-button-wrap">
@@ -16,8 +17,34 @@
         <button type="button" class="btn-default" id="status06">设备2-3</button>
         <input type="text" name="text" id="viewEquName" disabled>
     </div>
-    <div class="svg-map" id="svgMap" data-url="image/image.svg"></div>
+    <div class="content-container">
+        <div class="left-floor">
+            <ul class="list" id="floorWrap">
+                <li data-id="1">楼层1</li>
+                <li data-id="2">楼层2</li>
+                <li data-id="3">楼层3</li>
+                <li data-id="4">楼层4</li>
+                <li data-id="5">楼层5</li>
+            </ul>
+        </div>
+        <div class="svg-map" id="svgMap" data-url="image/img_01.svg"></div>
+    </div>
 </div>
 
-<script type="text/javascript" src="js/app.min.js?_=v1517843587882"></script><script type="text/javascript" src="js/common.min.js?_=v1517843587882"></script><script type="text/javascript" src="js/pages/index.js?_=v1517843587883"></script></body>
+<script type="text/html" id="tpl-edit">
+<div>
+    这里是编辑信息
+</div>
+</script>
+
+<script type="text/html" id="tpl-detail">
+    <div>
+        这里是详情信息
+    </div>
+</script>
+
+
+
+
+<script type="text/javascript" src="js/app.min.js?_=v1519662812082"></script><script type="text/javascript" src="js/common.min.js?_=v1519662812083"></script><script type="text/javascript" src="js/pages/template.js?_=v1519662812085"></script><script type="text/javascript" src="js/pages/my.dialog.js?_=v1519662812091"></script><script type="text/javascript" src="js/pages/index.js?_=v1519662812092"></script></body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "svgImage" : {
+    "src" : "image/img_02.svg",
+    "width" : 1520,
+    "height" : 467
+  },
+  "resultList" : [
+    {"id" : 1, "name" : "双门常闭1", "number" : "F1314", "x" : 97, "y" : 176, "iconName" : "ele_base"},
+    {"id" : 2, "name" : "双门常闭2", "number" : "F1315", "x" : 179, "y" : 193, "iconName" : "ele_normal"},
+    {"id" : 3, "name" : "双门常闭3", "number" : "F1316", "x" : 219, "y" : 233, "iconName" : "ele_warn"},
+    {"id" : 4, "name" : "双门常闭4", "number" : "F1317", "x" : 240, "y" : 188, "iconName" : "equ_base"},
+    {"id" : 5, "name" : "双门常闭5", "number" : "F1318", "x" : 276, "y" : 231, "iconName" : "equ_normal"},
+    {"id" : 6, "name" : "双门常闭6", "number" : "F1319", "x" : 164, "y" : 316, "iconName" : "equ_warn"},
+    {"id" : 7, "name" : "双门常闭7", "number" : "F1320", "x" : 242, "y" : 316, "iconName" : "ele_base"}
+  ]
+}

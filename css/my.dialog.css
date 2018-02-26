@@ -1,0 +1,114 @@
+/*弹框*/
+div.my-dialog-wrap{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 9999; }
+div.my-dialog-wrap .watermark{ width: 100%; height: 100%; background-color: rgba(0, 0, 0, .6); position: absolute; left: 0; top: 0; z-index: 1; }
+div.my-dialog-wrap .modal-body{ width: 500px; height: 200px; overflow: hidden;/* margin-top: -100px; margin-left: -250px;*/ padding: 50px 0 0 0; border: 1px solid #eaedf2; background-color: #FFF; position: absolute; top: 0; left: 0; z-index: 10; box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    /*transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s; /!* Firefox 4 *!/
+    -webkit-transition: all 0.5s linear 0s; /!* Safari 和 Chrome *!/
+    -o-transition: all 0.5s linear 0s; /!* Opera *!/*/
+}
+div.my-dialog-wrap .modal-body .title{ width: 100%; height: 50px; border-bottom: 1px solid #eaedf2; padding: 0 42px 0 15px; background-color: #F6F7FB; position: absolute; top: 0; left: 0; z-index: 1; }
+div.my-dialog-wrap .modal-body .title:after{ display: block; content: ''; clear: both; }
+div.my-dialog-wrap .modal-body .title h2{ width: 100%; font-size: 16px; line-height: 50px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+div.my-dialog-wrap .modal-body .title h2.icon-cycle{ padding-left: 20px; background: url("../images/cycle.png") no-repeat left center; color: #666; }
+
+div.my-dialog-wrap .modal-body .title a.btn-close{ display: block; width: 16px; height: 16px; background: url("../image/close.svg") no-repeat center; background-size: 100% 100%; position: absolute; top: 50%; right: 15px; margin-top: -8px; }
+div.my-dialog-wrap .modal-body .model-footer{ display: none; }
+
+div.my-dialog-wrap .model-content{ width: 100%; height: 100%; overflow-y: auto; font-size: 12px; color: #333; padding: 12px 0; }
+div.my-dialog-wrap .model-content .inner-content{ padding: 0 12px; }
+
+div.my-dialog-wrap.dialog-hint .modal-body{ padding-top: 40px; }
+div.my-dialog-wrap.dialog-hint .modal-body .title{ height:40px; }
+div.my-dialog-wrap.dialog-hint .modal-body .title h2{ font-size:16px; line-height:40px; }
+div.my-dialog-wrap.dialog-hint .modal-body .title a.btn-close{ width:12px; height:12px; margin-top:-6px; }
+div.my-dialog-wrap.dialog-hint .modal-body .model-content{ padding: 5px 0; }
+
+/*提示层*/
+div.my-dialog-wrap.dialog-hint.lime-alert .modal-body .inner-content{ font-size: 14px; text-align: center; padding-top: 15px; }
+
+/*透明提示层*/
+div.my-dialog-wrap.dialog-hint.lime-trans .modal-body{ overflow:inherit; background:none; box-shadow:none; border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+div.my-dialog-wrap.dialog-hint.lime-trans .modal-body .title{ background:none;  }
+div.my-dialog-wrap.dialog-hint.lime-trans .modal-body .model-content{ background: rgba(0, 0, 0, .5); color:#FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+div.my-dialog-wrap.dialog-hint.lime-trans .modal-body .inner-content{ width:100%; height:100%; display:flex; font-size: 14px; align-items: center; justify-content: center; flex-direction: column; }
+div.my-dialog-wrap.dialog-hint.lime-trans .modal-body .title a.btn-close{ display: none; }
+div.my-dialog-wrap.dialog-hint.lime-trans .watermark{ background: transparent; }
+
+/*询问层*/
+div.my-dialog-wrap.dialog-hint.lime-confirm .modal-body{ padding-bottom:57px; }
+div.my-dialog-wrap.dialog-hint.lime-confirm .modal-body .inner-content{ width:100%; height:100%; display:flex; font-size: 14px; align-items: center; justify-content: center; flex-direction: column; }
+div.my-dialog-wrap.dialog-hint.lime-confirm .modal-body .model-footer{ width:100%; overflow:hidden; border-top:1px solid #eaedf2; text-align:center; padding: 12px 0; position:absolute; left:0; bottom:0; }
+div.my-dialog-wrap.dialog-hint.lime-confirm button.confirm{ border:1px solid #D8DFE7; background-color: transparent; font-size:14px; line-height:14px; padding:8px 20px; margin: 0 5px; outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+div.my-dialog-wrap.dialog-hint.lime-confirm button.confirm.okay{ background-color:#29BD4F; color:#FFF; border-color:#29BD4F; }
+
+/*lime-myDialog*/
+div.my-dialog-wrap.lime-myDialog{}
+div.my-dialog-wrap.lime-myDialog .modal-body{ padding-bottom: 80px; }
+div.my-dialog-wrap.lime-myDialog .model-footer{ width: 100%; height: 60px; overflow: hidden; padding: 12px 15px; border-top:1px solid #eaedf2; }
+div.my-dialog-wrap.lime-myDialog .model-footer button{ border:1px solid #D8DFE7; background-color: transparent; font-size:14px; line-height:14px; padding:8px 20px; margin: 0 5px; outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+div.my-dialog-wrap.lime-myDialog .model-footer button.okayBtn, div.my-dialog-wrap.lime-myDialog .model-footer button.viewInfoBtn{ background-color:#29BD4F; color:#FFF; border-color:#29BD4F; }
+
+
+/*sameFloorDialog*/
+div.my-dialog-wrap.sameFloorDialog{}
+div.my-dialog-wrap.sameFloorDialog .modal-body{ padding-bottom: 60px; }
+div.my-dialog-wrap.sameFloorDialog .model-footer{ width: 100%; height: 60px; text-align: center; overflow: hidden; padding: 12px 15px; border-top:1px solid #eaedf2; }
+div.my-dialog-wrap.sameFloorDialog .model-footer button{ border:1px solid #D8DFE7; background-color: transparent; font-size:14px; line-height:14px; padding:8px 20px; margin: 0 5px; outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+div.my-dialog-wrap.sameFloorDialog .model-footer button.okayBtn, div.my-dialog-wrap.sameFloorDialog .model-footer button.viewInfoBtn{ background-color:#29BD4F; color:#FFF; border-color:#29BD4F; }
+
+
+/*addNodeInfoDialog*/
+div.my-dialog-wrap.addNodeInfoDialog{}
+div.my-dialog-wrap.addNodeInfoDialog .modal-body{ padding-bottom: 60px; }
+div.my-dialog-wrap.addNodeInfoDialog .model-footer{ width: 100%; height: 60px; text-align: right; overflow: hidden; padding: 12px 15px; border-top:1px solid #eaedf2; }
+div.my-dialog-wrap.addNodeInfoDialog .model-footer button{ border:1px solid #D8DFE7; background-color: transparent; font-size:14px; line-height:14px; padding:8px 20px; margin: 0 5px; outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+div.my-dialog-wrap.addNodeInfoDialog .model-footer button.okayBtn, div.my-dialog-wrap.addNodeInfoDialog .model-footer button.deleteBtn{ padding-left: 30px; background:#29BD4F no-repeat 13px center; color:#FFF; border-color:#29BD4F; }
+div.my-dialog-wrap.addNodeInfoDialog .model-footer button.okayBtn{ background-image: url("../images/node/save.png"); }
+div.my-dialog-wrap.addNodeInfoDialog .model-footer button.deleteBtn{ background-image: url("../images/node/del.png"); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

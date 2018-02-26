@@ -1,0 +1,12 @@
+{
+  "svgImage" : {
+    "src" : "image/img_05.svg",
+    "width" : 1520,
+    "height" : 307
+  },
+  "resultList" : [
+    {"id" : 1, "name" : "双门常闭1", "number" : "F1314", "x" : 739, "y" : 145, "iconName" : "equ_normal"},
+    {"id" : 2, "name" : "双门常闭2", "number" : "F1315", "x" : 800, "y" : 145, "iconName" : "equ_warn"},
+    {"id" : 3, "name" : "双门常闭3", "number" : "F1316", "x" : 829, "y" : 201, "iconName" : "equ_base"}
+  ]
+}
