@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>地图 坐标点 定位</title>
     <link rel="stylesheet" type="text/css" href="css/my.dialog.css">
-<link rel="stylesheet" type="text/css" href="css/app.min.css?_=v1519662812081"><link rel="stylesheet" type="text/css" href="css/common.min.css?_=v1519662812082"></head>
+    <link rel="stylesheet" type="text/css" href="css/app.min.css?_=v1519662812081">
+    <link rel="stylesheet" type="text/css" href="css/common.min.css?_=v1519662812082">
+    <style type="text/css">
+        table.update-image-wrap{ float: right; }
+        label.input-text, input.input-value{ display: inline-block; vertical-align: middle; }
+        div.svg-width-height{ display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1; }
+        div.svg-width-height svg{ width: 100%; }
+    </style>
+</head>
 <body>
 <div class="main-wrapper">
     <div class="top-button-wrap">
@@ -16,6 +24,13 @@
         <button type="button" class="btn-default" id="status05">设备2-2</button>
         <button type="button" class="btn-default" id="status06">设备2-3</button>
         <input type="text" name="text" id="viewEquName" disabled>
+
+        <table class="update-image-wrap">
+            <tr>
+                <th>获取SVG尺寸：</th>
+                <td><label for="updateSvg" class="input-text">上传SVG</label><input type="file" id="updateSvg"  class="input-value" /></td>
+            </tr>
+        </table>
     </div>
     <div class="content-container">
         <div class="left-floor">
@@ -31,6 +46,10 @@
     </div>
 </div>
 
+<div class="svg-width-height" id="svgWidthHeight">
+<img src="" alt="" />
+</div>
+
 <script type="text/html" id="tpl-edit">
 <div>
     这里是编辑信息
@@ -42,9 +61,20 @@
         这里是详情信息
     </div>
 </script>
+<script type="text/javascript" src="js/app.min.js?_=v1519662812082"></script>
+<script type="text/javascript" src="js/common.min.js?_=v1519662812083"></script>
+<script type="text/javascript" src="js/pages/template.js?_=v1519662812085"></script>
+<script type="text/javascript" src="js/pages/my.dialog.js?_=v1519662812091"></script>
+<script type="text/javascript" src="js/pages/index.js?_=v1519662812092"></script>
+<script type="text/javascript">
+$(function(){
+    var _svgWidthHeight = $('#svgWidthHeight'), _image = _svgWidthHeight.find('img');
 
-
-
-
-<script type="text/javascript" src="js/app.min.js?_=v1519662812082"></script><script type="text/javascript" src="js/common.min.js?_=v1519662812083"></script><script type="text/javascript" src="js/pages/template.js?_=v1519662812085"></script><script type="text/javascript" src="js/pages/my.dialog.js?_=v1519662812091"></script><script type="text/javascript" src="js/pages/index.js?_=v1519662812092"></script></body>
+    $('#updateSvg').on('change', function(){
+       _image.attr('src', $(this).val());
+        _svgWidthHeight.show();
+    });
+});
+</script>
+</body>
 </html>
