@@ -11,7 +11,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //控制器
 
-
 (function (factory) {
     window.Nodes = factory; //创建全局Node对象
     window.nodeJQuery = jQuery;
